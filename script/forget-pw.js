@@ -11,9 +11,8 @@ let currentStep = 1;
 
 function updateUI() {
 
-    // ---------- Show active form step ----------
+// display active form
     formSteps.forEach((step, index) => {
-        // step.style.display = (index + 1 === currentStep) ? "block" : "none";
         if(index+1 === currentStep){
             step.style.position = "relative";
             step.style.opacity = "1";
@@ -27,7 +26,7 @@ function updateUI() {
     });
 
 
-    // ---------- Progress bar ----------
+// progress bar update
     progressSteps.forEach((step, index) => {
 
         step.classList.remove("completed", "active");
@@ -42,7 +41,7 @@ function updateUI() {
     });
 
 
-    // ---------- Continue button text ----------
+// for changing text of continue btn
     switch (currentStep) {
 
         case 1:
@@ -63,13 +62,12 @@ function updateUI() {
     }
 
 
-    // ---------- Back button ----------
     backBtn.style.display = currentStep === 1 ? "none" : "inline-block";
 
-
-    // ---------- Back to Sign In ----------
+    // "back to sign-in" btn
     signInLink.style.display = currentStep === 1 ? "block" : "none";
 
+    // display success msg
     if(currentStep > formSteps.length){
         backBtn.style.display = "none";
         continueBtn.style.display = "none";
@@ -81,14 +79,6 @@ function updateUI() {
 
 
 continueBtn.addEventListener("click", () => {
-
-    // if (currentStep <= formSteps.length) {
-
-    //     currentStep++;
-
-    //     updateUI();
-
-    // }
 
     currentStep++;
     updateUI();
@@ -112,10 +102,7 @@ backBtn.addEventListener("click", () => {
 
 updateUI();
 
-
-
-
-
+// for otp inputs navigation
 const otpInputs = document.querySelectorAll(".otp-group input");
 
 otpInputs.forEach((input, index) => {
