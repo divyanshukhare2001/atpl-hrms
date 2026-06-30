@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AbhiConnect — Sign In</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--background-video-->
+    <video class="login-bg-video" autoplay muted loop>
+      <source src="./assets/login-page/hrms-test-video.mp4" type="video/webm" />
+    </video>
+
+    <!--main-card-->
+    <div class="card-wrap">
+      <!--left-part-->
+      <div class="slider-box">
+        <div class="slider-logo">
+          <div class="logo-icon">
+            <img
+              src="./assets/login-page/abhilogo.png"
+              width="100%"
+              style="border-radius: 10px"
+            />
+          </div>
+          <span class="logo-name">Abhi<span>Connect</span></span>
+        </div>
+
+        <div class="slides" id="slides">
+          <div class="slide active" data-index="0">
+            <div class="slide-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#60A5FA"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <div class="slide-feature">HR Dashboard</div>
+            <div class="slide-headline">
+              Your entire workforce,<br />at a glance.
+            </div>
+            <div class="slide-body">
+              A unified command center for HR ops — headcount, attrition,
+              payroll, and compliance metrics updated in real time.
+            </div>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-num">2.4×</span
+                ><span class="stat-label">Faster reporting</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">98%</span
+                ><span class="stat-label">Accuracy rate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-index="1">
+            <div class="slide-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#60A5FA"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="4" />
+                <path d="M20 21a8 8 0 1 0-16 0" />
+                <path d="M12 12v9m-3-3 3 3 3-3" />
+              </svg>
+            </div>
+            <div class="slide-feature">Recruitment</div>
+            <div class="slide-headline">
+              Hire faster with<br />intelligent pipelines.
+            </div>
+            <div class="slide-body">
+              From job post to offer letter — track every candidate, automate
+              follow-ups, and collaborate with hiring managers seamlessly.
+            </div>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-num">40%</span
+                ><span class="stat-label">Less time-to-hire</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">5k+</span
+                ><span class="stat-label">Companies trust us</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-index="2">
+            <div class="slide-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#60A5FA"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"
+                />
+              </svg>
+            </div>
+            <div class="slide-feature">Payroll & Compliance</div>
+            <div class="slide-headline">
+              Zero-error payroll,<br />every cycle.
+            </div>
+            <div class="slide-body">
+              Automated tax calculations, statutory deductions, and one-click
+              payslips. Stay compliant with local labour laws without the
+              headache.
+            </div>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-num">100%</span
+                ><span class="stat-label">Compliance ready</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">₹0</span
+                ><span class="stat-label">Penalty risk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide" data-index="3">
+            <div class="slide-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#60A5FA"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="slide-feature">Performance</div>
+            <div class="slide-headline">
+              Reviews that drive<br />real growth.
+            </div>
+            <div class="slide-body">
+              OKRs, 360° feedback, and continuous check-ins — build a
+              high-performance culture with data-backed appraisals that
+              employees actually trust.
+            </div>
+            <div class="slide-stats">
+              <div class="stat-item">
+                <span class="stat-num">3×</span
+                ><span class="stat-label">Engagement boost</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">86%</span
+                ><span class="stat-label">Retention rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-nav" id="dots">
+          <div class="dot active" data-i="0"></div>
+          <div class="dot" data-i="1"></div>
+          <div class="dot" data-i="2"></div>
+          <div class="dot" data-i="3"></div>
+        </div>
+      </div>
+
+      <!--right-part-->
+      <div class="login-box">
+        <div class="login-header">
+          <span class="login-welcome">Welcome back</span>
+          <h1 class="login-title">Sign in to<br />your workspace</h1>
+          <p class="login-sub">Access your HR dashboard and team tools.</p>
+        </div>
+
+        <form action="">
+          <div class="field">
+            <label>Employee ID</label>
+            <div class="field-wrap">
+              <span class="input-icon">
+                <i class="fa-regular fa-address-card"></i>
+              </span>
+              <input type="text" id="empID" placeholder="EMP001" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Password</label>
+            <div class="field-wrap">
+              <span class="input-icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <button class="toggle-pw" type="button">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="check-forgot-wrpr">
+          <label class="check-label">
+            <input type="checkbox" /> Keep me signed in
+          </label>
+          <a href="./forget-password.html" class="forgot">Forgot password?</a>
+        </div>
+
+        <button class="btn-signin">Sign In</button>
+      </div>
+    </div>
+
+    <script src="./script/login-script.js"></script>
+  </body>
+</html>
