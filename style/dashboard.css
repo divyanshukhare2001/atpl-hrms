@@ -21,7 +21,7 @@
         /* background: linear-gradient(145deg, #0F1C3F 0%, #1A4490 40%, #1E3A6E 70%, #111b45 100%); */
         position: relative;
         width: 250px;
-        /* height: 100vh; */
+        height: 100dvh;
         display: flex;
         flex-direction: column;
         overflow: hidden;
