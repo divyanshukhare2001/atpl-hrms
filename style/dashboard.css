@@ -1009,6 +1009,9 @@ a.cell.announcement-cell {
     grid-template-columns: 1fr;
   }
 
+     .widget-grid-1{
+    grid-template-columns: 1fr;
+  }
 
 }
 
@@ -1017,4 +1020,10 @@ a.cell.announcement-cell {
   .stat-grid{
     grid-template-columns: repeat(2,1fr);
   }
+
+ 
+  .widget-grid-1{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
 }
