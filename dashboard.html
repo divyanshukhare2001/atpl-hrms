@@ -216,7 +216,7 @@
         </div>
       </div>
 
-      <div class="logout-cell">
+      <div class="sidebar-section logout-cell">
         <a href="#" class="nav-link">
           <div class="icon-wrpr">
             <i
@@ -601,12 +601,12 @@
 
     <script>
       // to open administrator nested-links
-      const admin = document.querySelector(".nav-link.admin");
-      const children = document.querySelector(".nav-list.parent .children");
+      const admin = document.querySelector(".sidebar-section .admin");
+      const children = document.querySelector(".sidebar-section ul.children");
       const adminIcon = document.querySelector(".admin-wrpr .icon-wrpr");
       const mobileOpenToggle = document.querySelector(".hamburger-wrpr");
       const mobileCloseToggle = document.querySelector(
-        ".brand-cell-wrpr>.close-icon",
+        "#sidebar .close-icon",
       );
 
       mobileOpenToggle.addEventListener("click", () => {
@@ -629,7 +629,7 @@
 
       const sidebar = document.querySelector("#sidebar");
       const toggleBtn = document.querySelector(".brand-cell");
-      const hideList = document.querySelectorAll(".hide");
+      const hideList = document.querySelectorAll("#sidebar .hide");
       const notification = document.querySelectorAll(
         ".notification-badge.on-icon",
       );
@@ -677,7 +677,7 @@
 
       // clock-date generation
 
-      document.querySelectorAll(".clock-date").forEach((e) => {
+      document.querySelectorAll(".attendance-card .clock-date").forEach((e) => {
         e.textContent = today.toLocaleDateString("en-IN", {
           day: "numeric",
           month: "long",
