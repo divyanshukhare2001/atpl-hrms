@@ -265,10 +265,61 @@
         </div>
       </header>
       <main class="content">
-        <div class="welcome">
+        <!-- <div class="welcome">
           <h2>Welcome back, <span class="name-inject">Admin</span>! 👋</h2>
           <p>Here's what's happening in your organization today.</p>
-        </div>
+        </div> -->
+
+
+        <div class="welcome-row">
+
+  <div class="welcome-card">
+    <div class="welcome-card__text">
+      <p class="welcome-card__title">Welcome<br>back, Admin!</p>
+      <p class="welcome-card__desc">You've completed 85% of your mandatory training. You're doing great!</p>
+      <button class="view-progress-btn">View progress</button>
+    </div>
+    <div class="gauge">
+      <svg viewBox="0 0 130 130">
+        <circle class="track" cx="65" cy="65" r="56"/>
+        <circle class="progress" cx="65" cy="65" r="56"
+                stroke-dasharray="351.86"
+                stroke-dashoffset="28.15"/>
+      </svg>
+      <div class="gauge__center">
+        <span class="gauge__value">92%</span>
+        <span class="gauge__label">Attendance</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-card">
+    <span class="quote-mark" aria-hidden="true">&rdquo;</span>
+    <div class="quote-slides">
+      <div class="quote-slide active">
+        <p class="quote-text">"Creativity is intelligence having fun."</p>
+        <p class="quote-author">&mdash; The Daily Nudge</p>
+      </div>
+      <div class="quote-slide">
+        <p class="quote-text">"Small steps every day add up to big change."</p>
+        <p class="quote-author">&mdash; The Daily Nudge</p>
+      </div>
+      <div class="quote-slide">
+        <p class="quote-text">"Progress, not perfection."</p>
+        <p class="quote-author">&mdash; The Daily Nudge</p>
+      </div>
+    </div>
+    <div class="quote-dots">
+      <span class="active" data-index="0"></span>
+      <span data-index="1"></span>
+      <span data-index="2"></span>
+    </div>
+  </div>
+
+</div>
+
+<div class="stat-row">
+  <h2>Quick Stats</h2>
 
         <div class="stat-grid">
           <div class="card stat-card" data-number="1">
@@ -279,12 +330,12 @@
               <span class="figure">3,248</span>
               <p class="label">total employees</p>
             </div>
-            <div class="stat-trend" data-direction="up">
+            <!-- <div class="stat-trend" data-direction="up">
               <span class="icon">
                 <i class="fa-solid fa-caret-up"></i>
               </span>
               <p class="label">12% this quarter</p>
-            </div>
+            </div> -->
           </div>
           <div class="card stat-card" data-number="2">
             <div class="stat-icon">
@@ -294,12 +345,12 @@
               <span class="figure">255</span>
               <p class="label">attendance</p>
             </div>
-            <div class="stat-trend" data-direction="down">
+            <!-- <div class="stat-trend" data-direction="down">
               <span class="icon">
                 <i class="fa-solid fa-caret-up"></i>
               </span>
               <p class="label">1% this quarter</p>
-            </div>
+            </div> -->
           </div>
           <div class="card stat-card" data-number="3">
             <div class="stat-icon">
@@ -309,12 +360,12 @@
               <span class="figure">3,248</span>
               <p class="label">total employees</p>
             </div>
-            <div class="stat-trend" data-direction="up">
+            <!-- <div class="stat-trend" data-direction="up">
               <span class="icon">
                 <i class="fa-solid fa-caret-up"></i>
               </span>
               <p class="label">12% this quarter</p>
-            </div>
+            </div> -->
           </div>
           <div class="card stat-card" data-number="4">
             <div class="stat-icon">
@@ -324,14 +375,17 @@
               <span class="figure">9</span>
               <p class="label">leaves</p>
             </div>
-            <div class="stat-trend" data-direction="up">
+            <!-- <div class="stat-trend" data-direction="up">
               <span class="icon">
                 <i class="fa-solid fa-caret-up"></i>
               </span>
               <p class="label">7% this quarter</p>
-            </div>
+            </div> -->
           </div>
         </div>
+
+        </div>
+
 
         <div class="widget-grid-1">
           <div class="card attendance-card active">
@@ -444,7 +498,7 @@
               <span class="card-title">leave balance</span>
               <a href="#">view all</a>
             </div>
-            <ul class="leave-bal-table">
+            <!-- <ul class="leave-bal-table">
               <li>
                 <a href="#" class="cell leave-cell" data-type="casual">
                   <p class="leave-title">Casual Leave (CL)</p>
@@ -465,7 +519,50 @@
                   <span class="leave-cnt">2.5</span>
                 </a>
               </li>
-            </ul>
+            </ul> -->
+          
+              <div class="rings">
+
+    <div class="ring-item">
+      <div class="ring ring--blue">
+        <svg viewBox="0 0 88 88">
+          <circle class="track" cx="44" cy="44" r="38"/>
+          <circle class="progress" cx="44" cy="44" r="38"
+                  stroke-dasharray="238.76"
+                  stroke-dashoffset="35.8"/>
+        </svg>
+        <span class="ring__value">18</span>
+      </div>
+      <span class="ring-item__label">Casual leave</span>
+    </div>
+
+    <div class="ring-item">
+      <div class="ring ring--pink">
+        <svg viewBox="0 0 88 88">
+          <circle class="track" cx="44" cy="44" r="38"/>
+          <circle class="progress" cx="44" cy="44" r="38"
+                  stroke-dasharray="238.76"
+                  stroke-dashoffset="179.1"/>
+        </svg>
+        <span class="ring__value">06</span>
+      </div>
+      <span class="ring-item__label">Sick leave</span>
+    </div>
+
+    <div class="ring-item">
+      <div class="ring ring--green">
+        <svg viewBox="0 0 88 88">
+          <circle class="track" cx="44" cy="44" r="38"/>
+          <circle class="progress" cx="44" cy="44" r="38"
+                  stroke-dasharray="238.76"
+                  stroke-dashoffset="203"/>
+        </svg>
+        <span class="ring__value">04</span>
+      </div>
+      <span class="ring-item__label">Earned leave</span>
+    </div>
+
+  </div>
           </div>
         </div>
 
@@ -684,6 +781,41 @@
           year: "numeric",
         });
       });
+
+      <!-- quotes-slider -->
+
+        const slides = document.querySelectorAll('.quote-slide');
+  const dots = document.querySelectorAll('.quote-dots span');
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startAutoplay() {
+    timer = setInterval(next, 4000);
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(Number(dot.dataset.index));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
+</script>
+
     </script>
   </body>
 </html>
