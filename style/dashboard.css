@@ -720,33 +720,40 @@ main.content{
 }
 
 [data-number="2"].stat-card .stat-icon{
-      background-color: #fff7ed;
-      
-    color: #f97316;
+      background-color: #ffeded;
+    color: #f91616;
 }
 
 [data-number="2"].stat-card .figure{
-    color: #f97316;
+    color: #f91616;
 }
 
 [data-number="3"].stat-card .stat-icon{
-  background-color: #f0fdf4;
-  color: #22c55e;
+  background-color: #fff7ed;
+  color: #f97316;
 }
 
 [data-number="3"].stat-card .figure{
-    color: #22c55e;
+    color: #f97316;
 }
 
 
 [data-number="4"].stat-card .stat-icon{
       background-color: #faf5ff;
-      
-    color: #a855f7;
+    color: #D6488C;
 }
 
 [data-number="4"].stat-card .figure{
-    color: #a855f7;
+    color: #D6488C;
+}
+
+[data-number="5"].stat-card .stat-icon{
+  background-color: #f0fdf4;
+  color: #22c55e;
+}
+
+[data-number="5"].stat-card .figure{
+    color: #22c55e;
 }
 
 
