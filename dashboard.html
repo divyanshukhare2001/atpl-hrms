@@ -133,11 +133,7 @@
             <li>
               <a href="#" class="nav-link">
                 <div class="icon-wrpr">
-                  <!-- <i class="fa-brands fa-empire" style="color: rgb(255, 255, 255);"></i> -->
-                  <i
-                        class="fa-brands fa-cash-app"
-                        style="color: rgb(255, 255, 255)"
-                      ></i>
+                  <i class="fa-brands fa-empire" style="color: rgb(255, 255, 255);"></i>
                 </div>
                 <span class="hide">payroll</span>
               </a>
@@ -288,9 +284,8 @@
   <div class="welcome-card">
     <div class="welcome-card__text">
       <p class="welcome-card__title">Welcome<br>back, Admin!</p>
-      <!-- <p class="welcome-card__desc">You've completed 85% of your mandatory training. You're doing great!</p> -->
-      <p class="welcome-card__desc">Here is your daily overview and quick actions.</p>
-      <!-- <button class="view-progress-btn">View progress</button> -->
+      <p class="welcome-card__desc">You've completed 85% of your mandatory training. You're doing great!</p>
+      <button class="view-progress-btn">View progress</button>
     </div>
     <div class="gauge">
       <svg viewBox="0 0 130 130">
@@ -425,7 +420,7 @@
               <p class="label">7% this quarter</p>
             </div> -->
           </div></a>
-          <a href="./stat-list.html"><div class="card stat-card" data-number="1">
+          <div class="card stat-card" data-number="1">
             <div class="stat-icon">
               <i
                     class="fa-solid fa-calendar"
@@ -441,7 +436,7 @@
               </span>
               <p class="label">7% this quarter</p>
             </div> -->
-          </div></a>
+          </div>
 
         </div>
 
@@ -461,14 +456,14 @@
               </div>
               <div class="clock-date"></div>
             </div>
-            <!-- <div class="clock-location">
+            <div class="clock-location">
               <span class="clock-location-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </span>
               <p class="clock-location" id="clock-location">
                 geo-location enabled
               </p>
-            </div> -->
+            </div>
             <button class="clock-out" id="clockBtn">Clock Out</button>
           </div>
           <div class="card attendance-card in-active">
@@ -483,14 +478,14 @@
             </div> -->
               <div class="clock-date"></div>
             </div>
-            <!-- <div class="clock-location">
+            <div class="clock-location">
               <span class="clock-location-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </span>
               <p class="clock-location" id="clock-location">
                 geo-location enabled
               </p>
-            </div> -->
+            </div>
             <button class="clock-in" id="clockBtn">Clock In</button>
           </div>
 
@@ -627,8 +622,7 @@
           </div>
         </div>
 
-
-      <div class="widget-grid-3">
+        <div class="widget-grid-3">
             <div class="card approval-card">
 
                 <div class="card-header">
@@ -708,8 +702,6 @@
     </ul>
   </div>
         </div>
-
-        
 
         <div class="widget-grid-2">
           <div class="card upcoming-holidays">
@@ -841,126 +833,19 @@
       </main>
     </div>
 
+    <script src="./script/navbar-topbar.js"></script>
     <script>
-      // to open administrator nested-links
-      const admin = document.querySelector(".sidebar-section .admin");
-      const children = document.querySelector(".sidebar-section ul.children");
-      const adminIcon = document.querySelector(".admin-wrpr .icon-wrpr");
-      const mobileOpenToggle = document.querySelector(".hamburger-wrpr");
-      const mobileCloseToggle = document.querySelector(
-        "#sidebar .close-icon",
-      );
+      const statCards = document.querySelectorAll(".stat-grid a");
+      <!-- let statTitle; -->
+      statCards.forEach( (card) => {
+        card.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      mobileOpenToggle.addEventListener("click", () => {
-        sidebar.style.width = "250px";
-        // sidebar.classList.add("mobile-open");
-      });
+        const label = this.querySelector(".label").textContent.trim();
 
-      mobileCloseToggle.addEventListener("click", () => {
-        sidebar.style.width = "0";
-      });
-
-      admin.addEventListener("click", () => {
-        // adminIcon.style.transform = "rotate(180deg)";
-        if (sidebar.classList.contains("closed")) toggleSidebar();
-        adminIcon.classList.toggle("open");
-        children.classList.toggle("open");
-      });
-
-      // sidebar-collapse
-
-      const sidebar = document.querySelector("#sidebar");
-      const toggleBtn = document.querySelector(".brand-cell");
-      const hideList = document.querySelectorAll("#sidebar .hide");
-      const notification = document.querySelectorAll(
-        ".notification-badge.on-icon",
-      );
-
-      toggleBtn.addEventListener("click", toggleSidebar);
-
-      function toggleSidebar() {
-        sidebar.classList.toggle("closed");
-        // if(sidebar.classList.contains("closed")){
-        //   hideList.forEach((h)=>{
-        //     h.style.display = "none";
-        //   })
-        // }
-        // else{
-        //   hideList.forEach((h)=>{
-        //     h.style.display = "flex";
-        //   })
-        // }
-        hideList.forEach((h) => {
-          h.classList.toggle("hidden");
-        });
-
-        if (sidebar.classList.contains("closed")) {
-          notification.forEach((n) => {
-            n.style.opacity = "1";
-          });
-        } else {
-          notification.forEach((n) => {
-            n.style.opacity = "0";
-          });
-        }
-      }
-
-      // top-bar date generation
-
-      const today = new Date();
-
-      document.getElementById("topbar-date").textContent =
-        today.toLocaleDateString("en-IN", {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-
-      // clock-date generation
-
-      document.querySelectorAll(".attendance-card .clock-date").forEach((e) => {
-        e.textContent = today.toLocaleDateString("en-IN", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-      });
-
-      <!-- quotes-slider -->
-
-        const slides = document.querySelectorAll('.quote-slide');
-  const dots = document.querySelectorAll('.quote-dots span');
-  let current = 0;
-  let timer;
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = index;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
-
-  function next() {
-    goTo((current + 1) % slides.length);
-  }
-
-  function startAutoplay() {
-    timer = setInterval(next, 4000);
-  }
-
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      clearInterval(timer);
-      goTo(Number(dot.dataset.index));
-      startAutoplay();
+        window.location.href = `stat-list.html?label=${encodeURIComponent(label)}`;
     });
-  });
-
-  startAutoplay();
-</script>
-
+      } )
     </script>
   </body>
 </html>
