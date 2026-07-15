@@ -75,7 +75,7 @@ tr:nth-child(even) {
           <h2 class="hide">main</h2>
           <ul class="nav-list">
             <li>
-              <a href="./dashboard.html" class="nav-link active">
+              <a href="./dashboard.html" class="nav-link">
                 <div class="icon-wrpr">
                   <i
                     class="fa-solid fa-gauge"
@@ -349,126 +349,15 @@ tr:nth-child(even) {
       </main>
     </div>
 
+<script src="./script/navbar-topbar.js"></script>
+
     <script>
-      // to open administrator nested-links
-      const admin = document.querySelector(".sidebar-section .admin");
-      const children = document.querySelector(".sidebar-section ul.children");
-      const adminIcon = document.querySelector(".admin-wrpr .icon-wrpr");
-      const mobileOpenToggle = document.querySelector(".hamburger-wrpr");
-      const mobileCloseToggle = document.querySelector(
-        "#sidebar .close-icon",
-      );
+        const params = new URLSearchParams(window.location.search);
+const label = params.get("label");
 
-      mobileOpenToggle.addEventListener("click", () => {
-        sidebar.style.width = "250px";
-        // sidebar.classList.add("mobile-open");
-      });
-
-      mobileCloseToggle.addEventListener("click", () => {
-        sidebar.style.width = "0";
-      });
-
-      admin.addEventListener("click", () => {
-        // adminIcon.style.transform = "rotate(180deg)";
-        if (sidebar.classList.contains("closed")) toggleSidebar();
-        adminIcon.classList.toggle("open");
-        children.classList.toggle("open");
-      });
-
-      // sidebar-collapse
-
-      const sidebar = document.querySelector("#sidebar");
-      const toggleBtn = document.querySelector(".brand-cell");
-      const hideList = document.querySelectorAll("#sidebar .hide");
-      const notification = document.querySelectorAll(
-        ".notification-badge.on-icon",
-      );
-
-      toggleBtn.addEventListener("click", toggleSidebar);
-
-      function toggleSidebar() {
-        sidebar.classList.toggle("closed");
-        // if(sidebar.classList.contains("closed")){
-        //   hideList.forEach((h)=>{
-        //     h.style.display = "none";
-        //   })
-        // }
-        // else{
-        //   hideList.forEach((h)=>{
-        //     h.style.display = "flex";
-        //   })
-        // }
-        hideList.forEach((h) => {
-          h.classList.toggle("hidden");
-        });
-
-        if (sidebar.classList.contains("closed")) {
-          notification.forEach((n) => {
-            n.style.opacity = "1";
-          });
-        } else {
-          notification.forEach((n) => {
-            n.style.opacity = "0";
-          });
-        }
-      }
-
-      // top-bar date generation
-
-      const today = new Date();
-
-      document.getElementById("topbar-date").textContent =
-        today.toLocaleDateString("en-IN", {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-
-      // clock-date generation
-
-      document.querySelectorAll(".attendance-card .clock-date").forEach((e) => {
-        e.textContent = today.toLocaleDateString("en-IN", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-      });
-
-      <!-- quotes-slider -->
-
-        const slides = document.querySelectorAll('.quote-slide');
-  const dots = document.querySelectorAll('.quote-dots span');
-  let current = 0;
-  let timer;
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = index;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
-
-  function next() {
-    goTo((current + 1) % slides.length);
-  }
-
-  function startAutoplay() {
-    timer = setInterval(next, 4000);
-  }
-
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      clearInterval(timer);
-      goTo(Number(dot.dataset.index));
-      startAutoplay();
-    });
-  });
-
-  startAutoplay();
-</script>
-
+if (label) {
+    document.querySelector("h1").textContent = ` ${label}`;
+}
     </script>
   </body>
 </html>
