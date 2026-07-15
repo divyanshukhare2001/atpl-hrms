@@ -665,6 +665,10 @@ main.content{
   margin-bottom: 20px;
 }
 
+.stat-grid a{
+  text-decoration: none;
+}
+
 .card {
     border: 1px solid #e2e8f0;
     border-radius: 20px;
