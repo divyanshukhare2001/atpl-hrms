@@ -846,6 +846,40 @@
         window.location.href = `stat-list.html?label=${encodeURIComponent(label)}`;
     });
       } )
+
+
+       //    quotes-slider 
+
+        const slides = document.querySelectorAll('.quote-slide');
+  const dots = document.querySelectorAll('.quote-dots span');
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startAutoplay() {
+    timer = setInterval(next, 4000);
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(Number(dot.dataset.index));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
     </script>
   </body>
 </html>
