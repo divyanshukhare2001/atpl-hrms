@@ -18,37 +18,6 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      :root {
-        --bg: #eef1f7;
-        --surface: #ffffff;
-        --ink: #1b2436;
-        --ink-muted: #667085;
-        --ink-faint: #98a2b3;
-        --line: #e7eaf1;
-        --line-soft: #f0f2f7;
-
-        --indigo: #5b5fef;
-        --indigo-2: #7c6ff0;
-        --violet: #8b5cf6;
-        --blue: #2e6bf2;
-        --blue-light: #e9effe;
-        --purple: #7c3aed;
-        --purple-light: #f3ecfe;
-        --pink: #ec4899;
-        --pink-light: #fdeaf2;
-        --rose-light: #fce7ed;
-        --orange: #f59e0b;
-        --orange-light: #fef3e2;
-        --green: #16a34a;
-        --green-light: #e7f8ee;
-        --red: #ef4444;
-        --red-light: #fdecec;
-
-        --radius: 14px;
-        --shadow:
-          0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
-        --font: "Inter", sans-serif;
-      }
       * {
         box-sizing: border-box;
       }
@@ -57,9 +26,9 @@
       }
       html,
       body {
-        font-family: var(--font);
-        background: var(--bg);
-        color: var(--ink);
+        font-family: "Inter", sans-serif;
+        background: #eef1f7;
+        color: #1b2436;
         -webkit-font-smoothing: antialiased;
       }
 
@@ -69,43 +38,24 @@
         margin: 0 auto;
       }
 
-      .hr-banner {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        background: var(--purple-light);
-        border: 1px solid #e5d6fc;
-        color: #6d28d9;
-        font-size: 12.3px;
-        font-weight: 600;
-        padding: 9px 14px;
-        border-radius: 10px;
-        margin-bottom: 18px;
-        width: fit-content;
-      }
-      .hr-banner svg {
-        width: 14px;
-        height: 14px;
-      }
-
       /* Tabs */
       .tabs {
         display: flex;
         gap: 4px;
-        background: var(--surface);
-        border: 1px solid var(--line);
+        background: #ffffff;
+        border: 1px solid #e7eaf1;
         border-radius: 12px;
         padding: 5px;
         margin-bottom: 22px;
         width: fit-content;
-        box-shadow: var(--shadow);
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
         flex-wrap: wrap;
       }
       .tab-btn {
-        font-family: var(--font);
+        font-family: "Inter", sans-serif;
         font-size: 13px;
         font-weight: 600;
-        color: var(--ink-muted);
+        color: #667085;
         background: none;
         border: none;
         cursor: pointer;
@@ -120,26 +70,14 @@
           color 0.15s;
       }
       .tab-btn:hover {
-        background: var(--bg);
-        color: var(--ink);
+        background: #eef1f7;
+        color: #1b2436;
       }
       .tab-btn.active {
-        background: linear-gradient(135deg, var(--indigo), var(--violet));
+        background: linear-gradient(135deg, #5b5fef, #8b5cf6);
         color: #fff;
         box-shadow: 0 2px 8px rgba(91, 95, 239, 0.35);
       }
-      .tab-btn .lock-badge {
-        font-size: 9px;
-        font-weight: 700;
-        background: rgba(255, 255, 255, 0.25);
-        padding: 1px 5px;
-        border-radius: 5px;
-      }
-      .tab-btn:not(.active) .lock-badge {
-        background: var(--purple-light);
-        color: var(--purple);
-      }
-
       .panel {
         display: none;
         animation: fade 0.22s ease;
@@ -160,10 +98,10 @@
 
       /* Cards */
       .section-card {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+        background: #ffffff;
+        border: 1px solid #e7eaf1;
+        border-radius: 14px;
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
         margin-bottom: 18px;
         overflow: hidden;
       }
@@ -172,7 +110,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 16px 20px;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom: 1px solid #f0f2f7;
         gap: 12px;
         flex-wrap: wrap;
       }
@@ -188,8 +126,8 @@
         width: 26px;
         height: 26px;
         border-radius: 7px;
-        background: var(--blue-light);
-        color: var(--blue);
+        background: #e9effe;
+        color: #2e6bf2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -200,7 +138,7 @@
       }
       .section-card-desc {
         font-size: 12px;
-        color: var(--ink-faint);
+        color: #98a2b3;
         margin: 2px 0 0;
       }
       .section-card-body {
@@ -210,20 +148,17 @@
       .field-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        border: 1px solid var(--line-soft);
+        border: 1px solid #f0f2f7;
         border-radius: 10px;
         overflow: hidden;
-      }
-      .field-grid.single {
-        grid-template-columns: 1fr;
       }
       .field-row {
         display: flex;
         flex-direction: column;
         gap: 5px;
         padding: 13px 16px;
-        border-bottom: 1px solid var(--line-soft);
-        border-right: 1px solid var(--line-soft);
+        border-bottom: 1px solid #f0f2f7;
+        border-right: 1px solid #f0f2f7;
         position: relative;
       }
       .field-grid > .field-row:nth-child(2n) {
@@ -237,30 +172,30 @@
         font-size: 10.6px;
         text-transform: uppercase;
         letter-spacing: 0.06em;
-        color: var(--ink-faint);
+        color: #98a2b3;
         font-weight: 700;
         display: flex;
         align-items: center;
         gap: 6px;
       }
       .req-dot {
-        color: var(--red);
+        color: #ef4444;
         font-size: 11px;
       }
       .field-value {
         font-size: 13.5px;
-        color: var(--ink);
+        color: #1b2436;
         font-weight: 500;
         line-height: 1.5;
         word-break: break-word;
       }
       .field-value.muted {
-        color: var(--ink-faint);
+        color: #98a2b3;
         font-weight: 400;
         font-style: italic;
       }
       .field-value a {
-        color: var(--blue);
+        color: #2e6bf2;
         text-decoration: none;
       }
       .field-value a:hover {
@@ -283,12 +218,12 @@
         transition:
           opacity 0.12s,
           background 0.12s;
-        color: var(--indigo);
+        color: #5b5fef;
       }
       .field-row:hover .edit-pencil,
       .edit-pencil:focus-visible {
         opacity: 1;
-        background: var(--blue-light);
+        background: #e9effe;
         border-color: #d7e3fe;
       }
       .edit-pencil svg {
@@ -313,7 +248,7 @@
         font-weight: 800;
         color: #fff;
         font-size: 20px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
       }
       .logo-meta .fname {
         font-size: 13px;
@@ -321,13 +256,13 @@
       }
       .logo-meta .fmeta {
         font-size: 11.5px;
-        color: var(--ink-faint);
+        color: #98a2b3;
         margin-top: 2px;
       }
 
       /* Buttons */
       .btn {
-        font-family: var(--font);
+        font-family: "Inter", sans-serif;
         font-size: 12.8px;
         font-weight: 700;
         border-radius: 9px;
@@ -344,7 +279,7 @@
         height: 14px;
       }
       .btn-primary {
-        background: linear-gradient(135deg, var(--indigo), var(--violet));
+        background: linear-gradient(135deg, #5b5fef, #8b5cf6);
         color: #fff;
         box-shadow: 0 2px 8px rgba(91, 95, 239, 0.3);
       }
@@ -352,12 +287,12 @@
         filter: brightness(1.06);
       }
       .btn-ghost {
-        background: var(--surface);
-        color: var(--ink);
-        border-color: var(--line);
+        background: #ffffff;
+        color: #1b2436;
+        border-color: #e7eaf1;
       }
       .btn-ghost:hover {
-        background: var(--bg);
+        background: #eef1f7;
       }
       .btn-sm {
         padding: 7px 12px;
@@ -367,27 +302,27 @@
         width: 31px;
         height: 31px;
         border-radius: 8px;
-        border: 1px solid var(--line);
-        background: var(--surface);
+        border: 1px solid #e7eaf1;
+        background: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: var(--ink-muted);
+        color: #667085;
         transition: all 0.13s ease;
       }
       .icon-btn:hover {
-        background: var(--bg);
-        color: var(--ink);
+        background: #eef1f7;
+        color: #1b2436;
       }
       .icon-btn svg {
         width: 14px;
         height: 14px;
       }
       .icon-btn.danger {
-        color: var(--red);
+        color: #ef4444;
         border-color: #f7d3d3;
-        background: var(--red-light);
+        background: #fdecec;
       }
       .icon-btn.danger:hover {
         background: #fadada;
@@ -407,15 +342,15 @@
         font-size: 10.6px;
         text-transform: uppercase;
         letter-spacing: 0.06em;
-        color: var(--ink-faint);
+        color: #98a2b3;
         font-weight: 700;
         padding: 10px 14px;
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid #e7eaf1;
         white-space: nowrap;
       }
       table.data-table td {
         padding: 12px 14px;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom: 1px solid #f0f2f7;
         vertical-align: top;
       }
       table.data-table tr:last-child td {
@@ -429,13 +364,13 @@
       }
       .row-index {
         font-size: 11.5px;
-        color: var(--ink-faint);
+        color: #98a2b3;
       }
 
       .empty-state {
         text-align: center;
         padding: 40px 20px;
-        color: var(--ink-faint);
+        color: #98a2b3;
       }
       .empty-state svg {
         width: 32px;
@@ -453,7 +388,7 @@
         align-items: flex-start;
         gap: 14px;
         padding: 15px 18px;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom: 1px solid #f0f2f7;
       }
       .list-card:last-child {
         border-bottom: none;
@@ -462,8 +397,8 @@
         width: 38px;
         height: 38px;
         border-radius: 9px;
-        background: var(--blue-light);
-        color: var(--blue);
+        background: #e9effe;
+        color: #2e6bf2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -495,21 +430,17 @@
         border-radius: 20px;
       }
       .badge-live {
-        background: var(--green-light);
+        background: #e7f8ee;
         color: #15803d;
-      }
-      .badge-expiring {
-        background: var(--orange-light);
-        color: #b45309;
       }
       .list-meta {
         font-size: 11.8px;
-        color: var(--ink-faint);
+        color: #98a2b3;
         margin: 4px 0 0;
       }
       .list-desc {
         font-size: 12.8px;
-        color: var(--ink-muted);
+        color: #667085;
         margin: 7px 0 0;
         line-height: 1.55;
       }
@@ -538,8 +469,8 @@
       }
       .subhead h3 .tag {
         font-size: 10px;
-        background: var(--blue-light);
-        color: var(--blue);
+        background: #e9effe;
+        color: #2e6bf2;
         padding: 2px 8px;
         border-radius: 6px;
         font-weight: 700;
@@ -547,10 +478,10 @@
 
       /* ============ DEPARTMENT & DESIGNATION MANAGEMENT ============ */
       .dept-mgmt-card {
-        background: var(--surface);
-        border: 1px solid var(--line);
+        background: #ffffff;
+        border: 1px solid #e7eaf1;
         border-radius: 16px;
-        box-shadow: var(--shadow);
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
         padding: 22px;
       }
       .dept-mgmt-title {
@@ -560,7 +491,7 @@
         font-size: 17px;
         font-weight: 800;
         margin: 0 0 20px;
-        color: var(--ink);
+        color: #1b2436;
       }
       .dept-mgmt-title svg {
         width: 19px;
@@ -579,7 +510,7 @@
       }
 
       .dm-panel {
-        background: var(--bg);
+        background: #eef1f7;
         border-radius: 13px;
         padding: 16px;
       }
@@ -596,10 +527,10 @@
         height: 17px;
       }
       .dm-panel.depts .dm-panel-head {
-        color: var(--purple);
+        color: #7c3aed;
       }
       .dm-panel.desigs .dm-panel-head {
-        color: var(--blue);
+        color: #2e6bf2;
       }
 
       .dm-input-row {
@@ -609,21 +540,21 @@
       }
       .dm-input-row input {
         flex: 1;
-        font-family: var(--font);
+        font-family: "Inter", sans-serif;
         font-size: 13px;
         padding: 10px 13px;
-        border: 1px solid var(--line);
+        border: 1px solid #e7eaf1;
         border-radius: 9px;
-        background: var(--surface);
-        color: var(--ink);
+        background: #ffffff;
+        color: #1b2436;
         outline: none;
         transition: border-color 0.12s;
       }
       .dm-input-row input:focus {
-        border-color: var(--purple);
+        border-color: #7c3aed;
       }
       .dm-panel.desigs .dm-input-row input:focus {
-        border-color: var(--blue);
+        border-color: #2e6bf2;
       }
       .dm-add-btn {
         width: 38px;
@@ -636,11 +567,11 @@
         align-items: center;
         justify-content: center;
         color: #fff;
-        background: var(--purple);
+        background: #7c3aed;
         transition: filter 0.12s;
       }
       .dm-panel.desigs .dm-add-btn {
-        background: var(--blue);
+        background: #2e6bf2;
       }
       .dm-add-btn:hover {
         filter: brightness(1.08);
@@ -678,8 +609,8 @@
         align-items: center;
         justify-content: space-between;
         gap: 10px;
-        background: var(--surface);
-        border: 1px solid var(--line);
+        background: #ffffff;
+        border: 1px solid #e7eaf1;
         border-radius: 10px;
         padding: 11px 13px;
         cursor: pointer;
@@ -690,14 +621,10 @@
       .dm-row:hover {
         border-color: #d8deeb;
       }
-      .dm-row.selected {
-        border-color: var(--purple);
-        background: var(--purple-light);
-      }
       .dm-row-name {
         font-size: 13.5px;
         font-weight: 600;
-        color: var(--ink);
+        color: #1b2436;
         display: flex;
         align-items: center;
         gap: 9px;
@@ -706,15 +633,11 @@
       .dm-row-name .count-pill {
         font-size: 10.5px;
         font-weight: 700;
-        color: var(--ink-faint);
-        background: var(--bg);
+        color: #98a2b3;
+        background: #eef1f7;
         padding: 1px 7px;
         border-radius: 20px;
         flex-shrink: 0;
-      }
-      .dm-row.selected .count-pill {
-        background: #fff;
-        color: var(--purple);
       }
       .dm-row-name span.txt {
         overflow: hidden;
@@ -736,18 +659,18 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: var(--ink-faint);
+        color: #98a2b3;
         transition:
           background 0.12s,
           color 0.12s;
       }
       .dm-icon-btn:hover {
-        background: var(--red-light);
-        color: var(--red);
+        background: #fdecec;
+        color: #ef4444;
       }
       .dm-icon-btn.edit-ico:hover {
-        background: var(--blue-light);
-        color: var(--blue);
+        background: #e9effe;
+        color: #2e6bf2;
       }
       .dm-icon-btn svg {
         width: 14px;
@@ -760,23 +683,23 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        border: 2px dashed var(--line);
+        border: 2px dashed #e7eaf1;
         border-radius: 12px;
         padding: 44px 20px;
-        color: var(--ink-faint);
+        color: #98a2b3;
         min-height: 260px;
       }
       .dm-empty .ico-wrap {
         width: 52px;
         height: 52px;
         border-radius: 12px;
-        background: var(--surface);
-        border: 1px solid var(--line);
+        background: #ffffff;
+        border: 1px solid #e7eaf1;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 14px;
-        color: var(--ink-faint);
+        color: #98a2b3;
       }
       .dm-empty .ico-wrap svg {
         width: 24px;
@@ -797,162 +720,10 @@
       .desig-active-head .dept-pill {
         font-size: 12.5px;
         font-weight: 700;
-        color: var(--purple);
-        background: var(--purple-light);
+        color: #7c3aed;
+        background: #f3ecfe;
         padding: 4px 11px;
         border-radius: 20px;
-      }
-
-      /* Modal */
-      .overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(15, 20, 35, 0.5);
-        backdrop-filter: blur(2px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-        padding: 20px;
-      }
-      .overlay.open {
-        display: flex;
-      }
-      .modal {
-        background: var(--surface);
-        border-radius: 14px;
-        width: 100%;
-        max-width: 440px;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-        animation: pop 0.18s ease;
-        max-height: 86vh;
-        display: flex;
-        flex-direction: column;
-      }
-      @keyframes pop {
-        from {
-          opacity: 0;
-          transform: scale(0.97) translateY(6px);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-        }
-      }
-      .modal-head {
-        padding: 18px 20px 14px;
-        border-bottom: 1px solid var(--line-soft);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .modal-head h4 {
-        font-size: 15.5px;
-        font-weight: 800;
-        margin: 0;
-      }
-      .modal-close {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: var(--ink-faint);
-        width: 27px;
-        height: 27px;
-        border-radius: 7px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .modal-close:hover {
-        background: var(--bg);
-        color: var(--ink);
-      }
-      .modal-close svg {
-        width: 16px;
-        height: 16px;
-      }
-      .modal-body {
-        padding: 18px 20px;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-      }
-      .field {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .field label {
-        font-size: 11.5px;
-        font-weight: 700;
-        color: var(--ink-muted);
-      }
-      .field input,
-      .field textarea {
-        font-family: var(--font);
-        font-size: 13px;
-        padding: 10px 12px;
-        border: 1px solid var(--line);
-        border-radius: 9px;
-        background: var(--bg);
-        color: var(--ink);
-        outline: none;
-        transition:
-          border-color 0.12s,
-          background 0.12s;
-      }
-      .field input:focus,
-      .field textarea:focus {
-        border-color: var(--indigo);
-        background: var(--surface);
-      }
-      .field textarea {
-        resize: vertical;
-        min-height: 70px;
-        font-family: var(--font);
-      }
-      .field-hint {
-        font-size: 11px;
-        color: var(--ink-faint);
-      }
-      .modal-foot {
-        padding: 14px 20px 18px;
-        border-top: 1px solid var(--line-soft);
-        display: flex;
-        justify-content: flex-end;
-        gap: 8px;
-      }
-
-      .toast {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%) translateY(20px);
-        background: var(--ink);
-        color: #fff;
-        font-size: 13px;
-        font-weight: 600;
-        padding: 11px 18px;
-        border-radius: 9px;
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.22s ease;
-        z-index: 200;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      }
-      .toast.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-      }
-      .toast svg {
-        width: 15px;
-        height: 15px;
-        color: #4ade80;
-        flex-shrink: 0;
       }
 
       @media (max-width: 880px) {
@@ -1203,18 +974,16 @@
                   <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 12h8M8 16h5" /></svg></span>
                   Company Logo
                 </p>
-                <p class="section-card-desc">Shown across the sidebar, login screen and payslips.</p>
+                
               </div>
-              <button class="btn btn-ghost btn-sm" onclick="openLogoEditor()">
+              <button class="btn btn-ghost btn-sm">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
                 Replace logo
               </button>
             </div>
             <div class="logo-row">
-              <div class="logo-preview">A</div>
-              <div class="logo-meta">
-                <div class="fname">abhiconnect-logo-mark.svg</div>
-                <div class="fmeta">SVG · 12 KB · Updated 3 May 2026</div>
+              <div class="logo-preview">
+                <img src="" alt="">
               </div>
             </div>
           </div>
@@ -1226,50 +995,49 @@
                   <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V7a2 2 0 0 1 2-2h4V3h6v2h4a2 2 0 0 1 2 2v14" /></svg></span>
                   Company Details
                 </p>
-                <p class="section-card-desc">Registered identity and contact information, visible to every employee.</p>
               </div>
             </div>
             <div class="section-card-body">
               <div class="field-grid" id="overviewGrid">
                 <div class="field-row" data-type="text">
                   <span class="field-label">Company Registered Name<span class="req-dot">*</span></span>
-                  <span class="field-value">AbhiConnect Technologies Pvt. Ltd.</span>
-                  <button class="edit-pencil" title="Edit Company Registered Name" onclick="openFieldEditor(this)">
+                  <span class="field-value">Abhinnovation Technologies Pvt. Ltd.</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">Email Address<span class="req-dot">*</span></span>
-                  <span class="field-value">hello@abhiconnect.com</span>
-                  <button class="edit-pencil" title="Edit Email Address" onclick="openFieldEditor(this)">
+                  <span class="field-value">info@abhinnovation.com</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">Contact Number<span class="req-dot">*</span></span>
-                  <span class="field-value">+91 11 4567 8900</span>
-                  <button class="edit-pencil" title="Edit Contact Number" onclick="openFieldEditor(this)">
+                  <span class="field-value">+91 11 45691617</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">Website</span>
-                  <span class="field-value">https://www.abhiconnect.com</span>
-                  <button class="edit-pencil" title="Edit Website" onclick="openFieldEditor(this)">
+                  <span class="field-value">https://abhinnovation.com/</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">Industry Type<span class="req-dot">*</span></span>
                   <span class="field-value">Information Technology</span>
-                  <button class="edit-pencil" title="Edit Industry Type" onclick="openFieldEditor(this)">
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row full" data-type="textarea">
                   <span class="field-label">Company Description</span>
-                  <span class="field-value">AbhiConnect builds workforce management software for growing enterprise teams.</span>
-                  <button class="edit-pencil" title="Edit Company Description" onclick="openFieldEditor(this)">
+                  <span class="field-value">Abhinnovation Technologies builds workforce management software for growing enterprise teams.</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
@@ -1284,39 +1052,32 @@
                   <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><path d="M8.6 13.5 15.4 17.5M15.4 6.5 8.6 10.5" /></svg></span>
                   Social Profiles
                 </p>
-                <p class="section-card-desc">Linked from the employee-facing company page footer.</p>
               </div>
             </div>
             <div class="section-card-body">
               <div class="field-grid" id="socialGrid">
                 <div class="field-row" data-type="link">
                   <span class="field-label">Facebook Profile</span>
-                  <span class="field-value"><a href="https://facebook.com/abhiconnect" target="_blank" rel="noopener">https://facebook.com/abhiconnect</a></span>
-                  <button class="edit-pencil" title="Edit Facebook Profile" onclick="openFieldEditor(this)">
+                  <span class="field-value"><a href="https://www.facebook.com/Abhinnovation" target="_blank" rel="noopener">https://www.facebook.com/Abhinnovation</a></span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="link">
                   <span class="field-label">LinkedIn Profile</span>
-                  <span class="field-value"><a href="https://linkedin.com/company/abhiconnect" target="_blank" rel="noopener">https://linkedin.com/company/abhiconnect</a></span>
-                  <button class="edit-pencil" title="Edit LinkedIn Profile" onclick="openFieldEditor(this)">
+                  <span class="field-value"><a href="https://www.linkedin.com/company/abhinnovation-technologies-pvt-ltd/" target="_blank" rel="noopener">https://www.linkedin.com/company/abhinnovation-technologies-pvt-ltd/</a></span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="link">
                   <span class="field-label">Instagram Profile</span>
-                  <span class="field-value muted">Not set</span>
-                  <button class="edit-pencil" title="Edit Instagram Profile" onclick="openFieldEditor(this)">
+                  <span class="field-value"><a href="https://www.instagram.com/abhinnovationtechnologies/" target="_blank" rel="noopener">https://www.instagram.com/abhinnovationtechnologies/</a></span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
-                <div class="field-row" data-type="link">
-                  <span class="field-label">X (Twitter) Profile</span>
-                  <span class="field-value"><a href="https://x.com/abhiconnect" target="_blank" rel="noopener">https://x.com/abhiconnect</a></span>
-                  <button class="edit-pencil" title="Edit X (Twitter) Profile" onclick="openFieldEditor(this)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
-                  </button>
-                </div>
+
               </div>
             </div>
           </div>
@@ -1332,43 +1093,43 @@
               <div class="field-grid" id="headOfficeGrid">
                 <div class="field-row" data-type="text">
                   <span class="field-label">Office Address<span class="req-dot">*</span></span>
-                  <span class="field-value">4th Floor, Vertex Business Park, Sector 44</span>
-                  <button class="edit-pencil" title="Edit Office Address" onclick="openFieldEditor(this)">
+                  <span class="field-value">Plot No RZ B-4, GF, Raghu Nagar Near Janakpuri South/Dabri Metro, Pankha Road</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">City<span class="req-dot">*</span></span>
-                  <span class="field-value">Gurugram</span>
-                  <button class="edit-pencil" title="Edit City" onclick="openFieldEditor(this)">
+                  <span class="field-value">New Delhi</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">State<span class="req-dot">*</span></span>
-                  <span class="field-value">Haryana</span>
-                  <button class="edit-pencil" title="Edit State" onclick="openFieldEditor(this)">
+                  <span class="field-value">Delhi</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">Country<span class="req-dot">*</span></span>
                   <span class="field-value">India</span>
-                  <button class="edit-pencil" title="Edit Country" onclick="openFieldEditor(this)">
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="text">
                   <span class="field-label">PIN Code<span class="req-dot">*</span></span>
-                  <span class="field-value">122003</span>
-                  <button class="edit-pencil" title="Edit PIN Code" onclick="openFieldEditor(this)">
+                  <span class="field-value">110045</span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
                 <div class="field-row" data-type="link">
                   <span class="field-label">Google Maps Location</span>
-                  <span class="field-value"><a href="https://maps.google.com/?q=Vertex+Business+Park+Gurugram" target="_blank" rel="noopener">https://maps.google.com/?q=Vertex+Business+Park+Gurugram</a></span>
-                  <button class="edit-pencil" title="Edit Google Maps Location" onclick="openFieldEditor(this)">
+                  <span class="field-value"><a href="https://maps.app.goo.gl/grCBRre2cqXSmYSH7" target="_blank" rel="noopener">https://maps.google.com/?q=Abhinnovation+Technologies+Pvt+Ltd</a></span>
+                  <button class="edit-pencil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
                   </button>
                 </div>
@@ -1378,7 +1139,7 @@
 
           <div class="subhead">
             <h3>Branch Offices</h3>
-            <button class="btn btn-primary btn-sm" onclick="openBranchEditor()">
+            <button class="btn btn-primary btn-sm">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
               Add branch
             </button>
@@ -1408,10 +1169,10 @@
                     <td>Karnataka</td>
                     <td>India</td>
                     <td class="row-index">560034</td>
-                    <td><a href="https://maps.google.com/?q=Koramangala+Bengaluru" target="_blank" style="color:var(--blue);">View</a></td>
+                    <td><a href="https://maps.google.com/?q=Koramangala+Bengaluru" target="_blank" style="color:#2e6bf2;">View</a></td>
                     <td class="actions">
-                      <button class="icon-btn" title="Edit branch" onclick="openBranchEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="icon-btn danger" title="Delete branch" onclick="deleteBranch(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="icon-btn danger" title="Delete branch" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </td>
                   </tr>
                   <tr>
@@ -1422,10 +1183,10 @@
                     <td>Maharashtra</td>
                     <td>India</td>
                     <td class="row-index">411014</td>
-                    <td><span style="color:var(--ink-faint);">—</span></td>
+                    <td><span style="color:#98a2b3;">—</span></td>
                     <td class="actions">
-                      <button class="icon-btn" title="Edit branch" onclick="openBranchEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="icon-btn danger" title="Delete branch" onclick="deleteBranch(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="icon-btn danger" title="Delete branch" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </td>
                   </tr>
                 </tbody>
@@ -1433,7 +1194,7 @@
               <div class="empty-state" id="branchEmptyState" style="display:none;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V7a2 2 0 0 1 2-2h4V3h6v2h4a2 2 0 0 1 2 2v14"/></svg>
                 <p>No branch offices added yet.</p>
-                <button class="btn btn-primary btn-sm" onclick="openBranchEditor()">Add first branch</button>
+                <button class="btn btn-primary btn-sm">Add first branch</button>
               </div>
             </div>
           </div>
@@ -1443,7 +1204,7 @@
         <section class="panel" id="panel-policies">
           <div class="subhead">
             <h3>Policy Documents</h3>
-            <button class="btn btn-primary btn-sm" onclick="openPolicyEditor()">
+            <button class="btn btn-primary btn-sm">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
               Add policy
             </button>
@@ -1458,8 +1219,8 @@
               <div class="list-actions">
                 <button class="icon-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
                 <button class="icon-btn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></button>
-                <button class="icon-btn" title="Edit / re-upload" onclick="openPolicyEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deletePolicy(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit / re-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="list-card">
@@ -1471,8 +1232,8 @@
               <div class="list-actions">
                 <button class="icon-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
                 <button class="icon-btn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></button>
-                <button class="icon-btn" title="Edit / re-upload" onclick="openPolicyEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deletePolicy(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit / re-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="list-card">
@@ -1484,8 +1245,8 @@
               <div class="list-actions">
                 <button class="icon-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
                 <button class="icon-btn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></button>
-                <button class="icon-btn" title="Edit / re-upload" onclick="openPolicyEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deletePolicy(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit / re-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="list-card">
@@ -1497,14 +1258,14 @@
               <div class="list-actions">
                 <button class="icon-btn" title="View"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
                 <button class="icon-btn" title="Download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></button>
-                <button class="icon-btn" title="Edit / re-upload" onclick="openPolicyEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deletePolicy(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit / re-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="empty-state" id="policyEmptyState" style="display:none;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
               <p>No policy documents uploaded.</p>
-              <button class="btn btn-primary btn-sm" onclick="openPolicyEditor()">Add first policy</button>
+              <button class="btn btn-primary btn-sm">Add first policy</button>
             </div>
           </div>
         </section>
@@ -1526,72 +1287,72 @@
                 </div>
                 <div class="dm-input-row">
                   <input id="newDeptInput" placeholder="New Department Name" onkeydown="if (event.key === 'Enter') addDeptQuick();" />
-                  <button class="dm-add-btn" onclick="addDeptQuick()" title="Add department">
+                  <button class="dm-add-btn"title="Add department">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" /></svg>
                   </button>
                 </div>
                 <div class="dm-list" id="deptList">
-                  <div class="dm-row" data-target="desig-panel-d0" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d0">
                     <span class="dm-row-name"><span class="txt">Accounts</span><span class="count-pill">2</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d1" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d1" >
                     <span class="dm-row-name"><span class="txt">ACCOUNTS &amp; Projects</span><span class="count-pill">1</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d2" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d2" >
                     <span class="dm-row-name"><span class="txt">Administration</span><span class="count-pill">2</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d3" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d3" >
                     <span class="dm-row-name"><span class="txt">Admin &amp; Projects</span><span class="count-pill">1</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d4" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d4" >
                     <span class="dm-row-name"><span class="txt">Business Operations</span><span class="count-pill">2</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d5" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d5" >
                     <span class="dm-row-name"><span class="txt">IT</span><span class="count-pill">4</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d6" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d6" >
                     <span class="dm-row-name"><span class="txt">Human Resources</span><span class="count-pill">3</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d7" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d7" >
                     <span class="dm-row-name"><span class="txt">Sales &amp; Marketing</span><span class="count-pill">3</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
-                  <div class="dm-row" data-target="desig-panel-d8" onclick="selectDept(this)">
+                  <div class="dm-row" data-target="desig-panel-d8" >
                     <span class="dm-row-name"><span class="txt">Finance</span><span class="count-pill">2</span></span>
                     <span class="dm-row-actions">
-                      <button class="dm-icon-btn edit-ico" title="Rename" onclick="event.stopPropagation(); renameDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                      <button class="dm-icon-btn" title="Delete department" onclick="event.stopPropagation(); deleteDept(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                      <button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                      <button class="dm-icon-btn" title="Delete department"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
                     </span>
                   </div>
                 </div>
@@ -1614,110 +1375,110 @@
                   <div class="desig-panel" id="desig-panel-d0" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Accounts</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d1" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">ACCOUNTS &amp; Projects</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Project Coordinator</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Project Coordinator</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d2" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Administration</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title">
+                      <button class="dm-add-btn"  title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Admin Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Office Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Admin Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Office Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d3" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Admin &amp; Projects</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Project Admin</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Project Admin</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d4" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Business Operations</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Operations Analyst</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Operations Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Operations Analyst</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Operations Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d5" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">IT</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Software Engineer</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Senior Engineer</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">IT Support</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Engineering Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Software Engineer</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Senior Engineer</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">IT Support</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Engineering Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d6" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Human Resources</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn"  title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">HR Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">HR Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Talent Acquisition Lead</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">HR Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">HR Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Talent Acquisition Lead</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d7" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Sales &amp; Marketing</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn"  title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Sales Associate</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Account Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Marketing Lead</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Sales Associate</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Account Manager</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Marketing Lead</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
 
                   <div class="desig-panel" id="desig-panel-d8" style="display:none;">
                     <div class="desig-active-head"><span class="dept-pill">Finance</span></div>
                     <div class="dm-input-row">
-                      <input class="newDesigInput" placeholder="New Designation Title" onkeydown="if(event.key==='Enter'){addDesig(this)}">
-                      <button class="dm-add-btn" onclick="addDesig(this)" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
+                      <input class="newDesigInput" placeholder="New Designation Title" >
+                      <button class="dm-add-btn" title="Add designation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></button>
                     </div>
                     <div class="dm-list">
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
-                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Finance Controller</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" onclick="renameDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" onclick="deleteDesig(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Accounts Executive</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
+                      <div class="dm-row" style="cursor:default;"><span class="dm-row-name"><span class="txt">Finance Controller</span></span><span class="dm-row-actions"><button class="dm-icon-btn edit-ico" title="Rename" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button><button class="dm-icon-btn" title="Delete designation" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button></span></div>
                     </div>
                   </div>
                 </div>
@@ -1730,7 +1491,7 @@
         <section class="panel" id="panel-announcements">
           <div class="subhead">
             <h3>Company Announcements</h3>
-            <button class="btn btn-primary btn-sm" onclick="openAnnouncementEditor()">
+            <button class="btn btn-primary btn-sm" >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
               Add announcement
             </button>
@@ -1742,14 +1503,14 @@
                 <div class="list-title-row">
                   <p class="list-title">Q3 town hall — save the date</p>
                   <span class="badge badge-live">Active</span>
-                  <span class="badge" style="background:var(--line-soft); color:var(--ink-muted);">Attachment</span>
+                  <span class="badge" style="background:#f0f2f7; color:#667085;">Attachment</span>
                 </div>
                 <p class="list-meta">Published <span class="meta-publish">14 Jul 2026</span> · Expires <span class="meta-expiry">25 Jul 2026</span></p>
                 <p class="list-desc">All-hands town hall on the new leave policy rollout and Q3 roadmap review.</p>
               </div>
               <div class="list-actions">
-                <button class="icon-btn" title="Edit" onclick="openAnnouncementEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deleteAnnouncement(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="list-card" data-expiry="2026-07-31">
@@ -1758,14 +1519,14 @@
                 <div class="list-title-row">
                   <p class="list-title">New health insurance partner</p>
                   <span class="badge badge-live">Active</span>
-                  <span class="badge" style="background:var(--line-soft); color:var(--ink-muted);">Attachment</span>
+                  <span class="badge" style="background:#f0f2f7; color:#667085;">Attachment</span>
                 </div>
                 <p class="list-meta">Published <span class="meta-publish">10 Jul 2026</span> · Expires <span class="meta-expiry">31 Jul 2026</span></p>
                 <p class="list-desc">We've switched to Care Plus Health for FY26–27. Enrollment closes end of month.</p>
               </div>
               <div class="list-actions">
-                <button class="icon-btn" title="Edit" onclick="openAnnouncementEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deleteAnnouncement(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="list-card" data-expiry="2026-08-16">
@@ -1779,42 +1540,19 @@
                 <p class="list-desc">All AbhiConnect offices will remain closed on 15th August. Support desk stays on-call.</p>
               </div>
               <div class="list-actions">
-                <button class="icon-btn" title="Edit" onclick="openAnnouncementEditor(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
-                <button class="icon-btn danger" title="Delete" onclick="deleteAnnouncement(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
+                <button class="icon-btn" title="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg></button>
+                <button class="icon-btn danger" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6"/></svg></button>
               </div>
             </div>
             <div class="empty-state" id="announcementEmptyState" style="display:none;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l18-5v12L3 14v-3z"/></svg>
               <p>No announcements published.</p>
-              <button class="btn btn-primary btn-sm" onclick="openAnnouncementEditor()">Add first announcement</button>
+              <button class="btn btn-primary btn-sm">Add first announcement</button>
             </div>
           </div>
         </section>
       </main>
     </div>
-
-    <!-- ============ GENERIC MODAL ============ -->
-    <div class="overlay" id="overlay">
-      <div class="modal">
-        <div class="modal-head">
-          <h4 id="modalTitle">Edit field</h4>
-          <button class="modal-close" onclick="closeModal()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12" /></svg>
-          </button>
-        </div>
-        <div class="modal-body" id="modalBody"></div>
-        <div class="modal-foot">
-          <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
-          <button class="btn btn-primary" id="modalSaveBtn">Save changes</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="toast" id="toast">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5" /></svg>
-      <span id="toastText">Saved</span>
-    </div>
-
 
     <script>
             /* ---------- Tabs ---------- */
